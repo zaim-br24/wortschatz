@@ -588,7 +588,7 @@ const Flashcard: React.FC = () => {
     // const randomIndex = Math.floor(Math.random() * availableWords.length);
     // const selectedWord = availableWords[randomIndex];
 
-    let availableWords = words.length;
+    const availableWords = words.length;
     if (availableWords === 0) {
       setCurrentWord(null);
       return;

@@ -563,7 +563,7 @@ const words: Word[] = [
 
 const Flashcard: React.FC = () => {
   const [currentWord, setCurrentWord] = useState<Word | null>(null);
-  const [seenWords, setSeenWords] = useState<{ [key: string]: number }>({});
+  // const [seenWords, setSeenWords] = useState<{ [key: string]: number }>({});
   const [color, setColor] = useState<Colors>({
     noun: "text-rose-600",
     verb: "text-green-700",
@@ -597,10 +597,10 @@ const Flashcard: React.FC = () => {
 
     const randomIndex = Math.floor(Math.random() * availableWords);
     const selectedWord = words[randomIndex];
-    setSeenWords((prev) => ({
-      ...prev,
-      [selectedWord.german]: (prev[selectedWord.german] || 0) + 1,
-    }));
+    // setSeenWords((prev) => ({
+    //   ...prev,
+    //   [selectedWord.german]: (prev[selectedWord.german] || 0) + 1,
+    // }));
 
     setCurrentWord(selectedWord);
   };
@@ -611,7 +611,7 @@ const Flashcard: React.FC = () => {
 
   const handleHideWord = () => {
     if (currentWord) {
-      setSeenWords((prev) => ({ ...prev, [currentWord.german]: 5 }));
+      // setSeenWords((prev) => ({ ...prev, [currentWord.german]: 5 }));
       loadNewWord();
     }
   };

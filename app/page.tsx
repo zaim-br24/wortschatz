@@ -20,6 +20,179 @@ type Colors = {
 
 const words: Word[] = [
   {
+    german: "die Bedingung",
+    meaning: "eine Voraussetzung oder ein Umstand",
+    translation: "condition",
+    example1: "Unter diesen Bedingungen kann ich nicht arbeiten.",
+    sentenceTranslation1: "I cannot work under these conditions.",
+    example2: "Die Bedingungen des Vertrags sind klar.",
+    sentenceTranslation2: "The conditions of the contract are clear.",
+    type: "noun",
+  },
+  {
+    german: "die Ebene",
+    meaning: "ein Niveau oder eine Stufe",
+    translation: "level/plane",
+    example1: "Wir müssen das Problem auf einer höheren Ebene diskutieren.",
+    sentenceTranslation1: "We need to discuss the problem at a higher level.",
+    example2: "Das Flugzeug flog in großer Höhe auf dieser Ebene.",
+    sentenceTranslation2: "The plane flew at a high altitude on this plane.",
+    type: "noun",
+  },
+  {
+    german: "die Gesellschaft",
+    meaning:
+      "die Gesamtheit der Menschen, die in einem bestimmten Gebiet leben",
+    translation: "society",
+    example1: "Die Gesellschaft verändert sich ständig.",
+    sentenceTranslation1: "Society is constantly changing.",
+    example2: "Er engagiert sich für die Gesellschaft.",
+    sentenceTranslation2: "He is committed to society.",
+    type: "noun",
+  },
+  {
+    german: "die Quelle",
+    meaning: "der Ursprung oder die Herkunft von etwas",
+    translation: "source",
+    example1: "Die Quelle des Flusses liegt in den Bergen.",
+    sentenceTranslation1: "The source of the river is in the mountains.",
+    example2: "Die Informationen stammen aus zuverlässiger Quelle.",
+    sentenceTranslation2: "The information comes from a reliable source.",
+    type: "noun",
+  },
+  {
+    german: "die Tendenz",
+    meaning: "die Neigung zu einer bestimmten Entwicklung",
+    translation: "tendency",
+    example1: "Es gibt eine Tendenz zu steigenden Preisen.",
+    sentenceTranslation1: "There is a tendency towards rising prices.",
+    example2: "Er hat die Tendenz, zu spät zu kommen.",
+    sentenceTranslation2: "He has a tendency to be late.",
+    type: "noun",
+  },
+  {
+    german: "anspruchsvoll",
+    meaning: "hohe Anforderungen stellend, schwierig",
+    translation: "demanding/challenging",
+    example1: "Das Projekt ist sehr anspruchsvoll.",
+    sentenceTranslation1: "The project is very demanding.",
+    example2: "Sie hat einen anspruchsvollen Geschmack.",
+    sentenceTranslation2: "She has demanding tastes.",
+    type: "adjective",
+  },
+  {
+    german: "bedeutend",
+    meaning: "wichtig, erheblich",
+    translation: "significant/important",
+    example1: "Das ist ein bedeutender Fortschritt.",
+    sentenceTranslation1: "This is a significant progress.",
+    example2: "Er spielte eine bedeutende Rolle.",
+    sentenceTranslation2: "He played a significant role.",
+    type: "adjective",
+  },
+  {
+    german: "komplex",
+    meaning: "vielschichtig, schwierig zu verstehen",
+    translation: "complex",
+    example1: "Das Thema ist sehr komplex.",
+    sentenceTranslation1: "The topic is very complex.",
+    example2: "Es handelt sich um ein komplexes Problem.",
+    sentenceTranslation2: "It is a complex problem.",
+    type: "adjective",
+  },
+  {
+    german: "relevant",
+    meaning: "von Bedeutung, wichtig für den Zusammenhang",
+    translation: "relevant",
+    example1: "Diese Information ist für uns relevant.",
+    sentenceTranslation1: "This information is relevant to us.",
+    example2: "Das ist nicht relevant für die Diskussion.",
+    sentenceTranslation2: "That is not relevant to the discussion.",
+    type: "adjective",
+  },
+  {
+    german: "verfügen über",
+    meaning: "etwas besitzen, zur Verfügung haben",
+    translation: "to have at one's disposal/to possess",
+    example1: "Das Unternehmen verfügt über moderne Technologien.",
+    sentenceTranslation1:
+      "The company has modern technologies at its disposal.",
+    example2: "Er verfügt über umfangreiche Kenntnisse.",
+    sentenceTranslation2: "He possesses extensive knowledge.",
+    type: "verb",
+  },
+  {
+    german: "berücksichtigen",
+    meaning: "etwas in Betracht ziehen, beachten",
+    translation: "to consider/to take into account",
+    example1: "Wir müssen alle Faktoren berücksichtigen.",
+    sentenceTranslation1: "We must consider all factors.",
+    example2: "Bitte berücksichtigen Sie die Frist.",
+    sentenceTranslation2: "Please take the deadline into account.",
+    type: "verb",
+  },
+  {
+    german: "entwickeln",
+    meaning: "etwas weiterentwickeln, entstehen lassen",
+    translation: "to develop",
+    example1: "Die Firma entwickelt neue Produkte.",
+    sentenceTranslation1: "The company is developing new products.",
+    example2: "Die Technologie entwickelt sich schnell.",
+    sentenceTranslation2: "The technology is developing rapidly.",
+    type: "verb",
+  },
+  {
+    german: "erweitern",
+    meaning: "vergrößern, ausdehnen",
+    translation: "to expand/to broaden",
+    example1: "Das Unternehmen möchte seine Marktanteile erweitern.",
+    sentenceTranslation1: "The company wants to expand its market share.",
+    example2: "Wir müssen unseren Horizont erweitern.",
+    sentenceTranslation2: "We need to broaden our horizons.",
+    type: "verb",
+  },
+  {
+    german: "fördern",
+    meaning: "unterstützen, vorantreiben",
+    translation: "to promote/to support",
+    example1: "Die Regierung fördert die Forschung.",
+    sentenceTranslation1: "The government promotes research.",
+    example2: "Wir müssen die Zusammenarbeit fördern.",
+    sentenceTranslation2: "We must support the collaboration.",
+    type: "verb",
+  },
+  {
+    german: "gestalten",
+    meaning: "formen, gestalten, entwerfen",
+    translation: "to shape/to design",
+    example1: "Wir müssen die Zukunft gestalten.",
+    sentenceTranslation1: "We must shape the future.",
+    example2: "Er hat das Projekt gestaltet.",
+    sentenceTranslation2: "He designed the project.",
+    type: "verb",
+  },
+  {
+    german: "verbessern",
+    meaning: "etwas besser machen",
+    translation: "to improve",
+    example1: "Wir müssen die Qualität verbessern.",
+    sentenceTranslation1: "We must improve the quality.",
+    example2: "Er möchte seine Sprachkenntnisse verbessern.",
+    sentenceTranslation2: "He wants to improve his language skills.",
+    type: "verb",
+  },
+  {
+    german: "verhindern",
+    meaning: "etwas vermeiden, dafür sorgen, dass etwas nicht passiert",
+    translation: "to prevent",
+    example1: "Wir müssen Unfälle verhindern.",
+    sentenceTranslation1: "We must prevent accidents.",
+    example2: "Die Maßnahmen sollen die Ausbreitung der Krankheit verhindern.",
+    sentenceTranslation2:
+      "The measures are intended to prevent the spread of the disease.",
+    type: "verb",
+  },
+  {
     german: "die Neugier",
     meaning: "der Wunsch, Neues zu erfahren",
     translation: "curiosity",
@@ -560,67 +733,51 @@ const words: Word[] = [
     type: "verb",
   },
 ];
-const color:Colors[] = [{
-  noun: "text-rose-600",
-  verb: "text-green-700",
-  adjective: "text-blue-700",
-  adverb: "text-purple-700",
-}];
-
+const color: Colors[] = [
+  {
+    noun: "text-rose-600",
+    verb: "text-green-600",
+    adjective: "text-blue-700",
+    adverb: "text-purple-700",
+  },
+];
 const Flashcard: React.FC = () => {
   const [currentWord, setCurrentWord] = useState<Word | null>(null);
-  // const [seenWords, setSeenWords] = useState<{ [key: string]: number }>({});
 
   useEffect(() => {
     loadNewWord();
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.code === "Space") {
+        event.preventDefault(); // Prevent page scrolling on space press
+        loadNewWord();
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
   }, []);
 
   const loadNewWord = () => {
-    // let availableWords = words.filter(
-    //   (word) => !seenWords[word.german] || seenWords[word.german] < 5
-    // );
-
-    // if (availableWords.length === 0) {
-    //   setCurrentWord(null);
-    //   return;
-    // }
-
-    // const randomIndex = Math.floor(Math.random() * availableWords.length);
-    // const selectedWord = availableWords[randomIndex];
-
-    const availableWords = words.length;
-    if (availableWords === 0) {
+    if (words.length === 0) {
       setCurrentWord(null);
       return;
     }
 
-    const randomIndex = Math.floor(Math.random() * availableWords);
+    const randomIndex = Math.floor(Math.random() * words.length);
     const selectedWord = words[randomIndex];
-    // setSeenWords((prev) => ({
-    //   ...prev,
-    //   [selectedWord.german]: (prev[selectedWord.german] || 0) + 1,
-    // }));
 
     setCurrentWord(selectedWord);
   };
 
-  const handleNextWord = () => {
-    loadNewWord();
-  };
-
-  const handleHideWord = () => {
-    if (currentWord) {
-      // setSeenWords((prev) => ({ ...prev, [currentWord.german]: 5 }));
-      loadNewWord();
-    }
-  };
-
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen bg-gray-100 ">
+    <div className="flex flex-col justify-center items-center h-screen bg-gray-100">
       {currentWord ? (
         <div
-          className="flex flex-col justify-center items-center bg-white shadow-lg rounded-xl sm:p-10  p-7  sm:w-[80%] w-[100%] text-center cursor-pointer"
-          onClick={handleNextWord}
+          className="flex flex-col justify-center items-center bg-white shadow-lg rounded-xl sm:p-10 p-7 h-[80%] sm:w-[80%] w-[100%] text-center cursor-pointer"
+          onClick={loadNewWord}
         >
           <h2
             className={`text-4xl sm:text-6xl font-extrabold mb-4 ${
@@ -629,16 +786,16 @@ const Flashcard: React.FC = () => {
           >
             {currentWord.german}
             <span className="text-base sm:text-lg text-gray-500 italic">
-              ({`${currentWord.translation}`})-
+              ({`${currentWord.translation}`})
             </span>
             <span className="text-base sm:text-lg text-gray-300 italic">
-              {`${currentWord.type}`}
+              {" "}
+              {`${currentWord.type}`}{" "}
             </span>
           </h2>
           <p className="mb-2 text-gray-400 italic text-sm sm:text-base">
             {currentWord.meaning}
           </p>
-
           <p className="text-lg sm:text-xl mt-2 text-gray-600 italic font-bold">
             {currentWord.example1}
           </p>
@@ -655,13 +812,6 @@ const Flashcard: React.FC = () => {
       ) : (
         <p className="text-lg sm:text-xl">No more words for today!</p>
       )}
-      <button
-        hidden
-        onClick={handleHideWord}
-        className="mt-5 bg-blue-500 text-white px-6 py-2 rounded-lg shadow-md hover:bg-blue-600"
-      >
-        Don't show this word anymore
-      </button>
     </div>
   );
 };

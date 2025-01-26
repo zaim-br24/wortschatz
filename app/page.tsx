@@ -69,7 +69,7 @@ const words: Word[] = [
     sentenceTranslation2: "I'm planning for the future.",
     type: "noun",
   },
-    {
+  {
     german: "erfolgreich",
     meaning: "mit Erfolg",
     translation: "successful",
@@ -119,7 +119,7 @@ const words: Word[] = [
     sentenceTranslation2: "That's a complicated question.",
     type: "adjective",
   },
-    {
+  {
     german: "die Auswirkung",
     meaning: "die Folge oder Konsequenz von etwas",
     translation: "impact/effect",
@@ -169,7 +169,7 @@ const words: Word[] = [
     sentenceTranslation2: "We need to change perspective.",
     type: "noun",
   },
-    {
+  {
     german: "überraschend",
     meaning: "unerwartet",
     translation: "surprising",
@@ -209,7 +209,7 @@ const words: Word[] = [
     sentenceTranslation2: "They work well together.",
     type: "verb",
   },
-    {
+  {
     german: "erklären",
     meaning: "etwas verständlich machen",
     translation: "to explain",
@@ -227,7 +227,7 @@ const words: Word[] = [
     sentenceTranslation1: "She is always honest with me.",
     example2: "Ehrlichkeit ist wichtig in einer Beziehung.",
     sentenceTranslation2: "Honesty is important in a relationship.",
-    type: "adjective"
+    type: "adjective",
   },
   {
     german: "hilfsbereit",
@@ -237,7 +237,7 @@ const words: Word[] = [
     sentenceTranslation1: "He is always very helpful.",
     example2: "Die Nachbarn sind sehr hilfsbereit.",
     sentenceTranslation2: "The neighbors are very helpful.",
-    type: "adjective"
+    type: "adjective",
   },
   {
     german: "die Zufriedenheit /-en",
@@ -560,21 +560,20 @@ const words: Word[] = [
     type: "verb",
   },
 ];
+const color:Colors[] = [{
+  noun: "text-rose-600",
+  verb: "text-green-700",
+  adjective: "text-blue-700",
+  adverb: "text-purple-700",
+}];
 
 const Flashcard: React.FC = () => {
   const [currentWord, setCurrentWord] = useState<Word | null>(null);
   // const [seenWords, setSeenWords] = useState<{ [key: string]: number }>({});
-  const [color, setColor] = useState<Colors>({
-    noun: "text-rose-600",
-    verb: "text-green-700",
-    adjective: "text-blue-700",
-    adverb: "text-purple-700",
-  });
 
   useEffect(() => {
     loadNewWord();
   }, []);
-
 
   const loadNewWord = () => {
     // let availableWords = words.filter(
@@ -616,56 +615,55 @@ const Flashcard: React.FC = () => {
     }
   };
 
- return (
-   <div className="flex flex-col justify-center items-center min-h-screen bg-gray-100 ">
-     {currentWord ? (
-       <div
-         className="flex flex-col justify-center items-center bg-white shadow-lg rounded-xl sm:p-10  p-7  sm:w-[80%] w-[100%] text-center cursor-pointer"
-         onClick={handleNextWord}
-       >
-         <h2
-           className={`text-4xl sm:text-6xl font-extrabold mb-4 ${
-             color[currentWord.type]
-           }`}
-         >
-           {currentWord.german}
-           <span className="text-base sm:text-lg text-gray-500 italic">
-             ({`${currentWord.translation}`})-
-           </span>
-           <span className="text-base sm:text-lg text-gray-300 italic">
-             {`${currentWord.type}`}
-           </span>
-         </h2>
-         <p className="mb-2 text-gray-400 italic text-sm sm:text-base">
-           {currentWord.meaning}
-         </p>
+  return (
+    <div className="flex flex-col justify-center items-center min-h-screen bg-gray-100 ">
+      {currentWord ? (
+        <div
+          className="flex flex-col justify-center items-center bg-white shadow-lg rounded-xl sm:p-10  p-7  sm:w-[80%] w-[100%] text-center cursor-pointer"
+          onClick={handleNextWord}
+        >
+          <h2
+            className={`text-4xl sm:text-6xl font-extrabold mb-4 ${
+              color[0][currentWord.type]
+            }`}
+          >
+            {currentWord.german}
+            <span className="text-base sm:text-lg text-gray-500 italic">
+              ({`${currentWord.translation}`})-
+            </span>
+            <span className="text-base sm:text-lg text-gray-300 italic">
+              {`${currentWord.type}`}
+            </span>
+          </h2>
+          <p className="mb-2 text-gray-400 italic text-sm sm:text-base">
+            {currentWord.meaning}
+          </p>
 
-         <p className="text-lg sm:text-xl mt-2 text-gray-600 italic font-bold">
-           {currentWord.example1}
-         </p>
-         <p className="text-sm sm:text-md text-gray-300 italic font-medium">
-           ({currentWord.sentenceTranslation1})
-         </p>
-         <p className="text-lg sm:text-xl mt-2 text-gray-600 italic font-semibold">
-           {currentWord.example2}
-         </p>
-         <p className="text-sm sm:text-md text-gray-300 italic font-medium">
-           ({currentWord.sentenceTranslation2})
-         </p>
-       </div>
-     ) : (
-       <p className="text-lg sm:text-xl">No more words for today!</p>
-     )}
-     <button
-       hidden
-       onClick={handleHideWord}
-       className="mt-5 bg-blue-500 text-white px-6 py-2 rounded-lg shadow-md hover:bg-blue-600"
-     >
-       Don't show this word anymore
-     </button>
-   </div>
- );
-
+          <p className="text-lg sm:text-xl mt-2 text-gray-600 italic font-bold">
+            {currentWord.example1}
+          </p>
+          <p className="text-sm sm:text-md text-gray-300 italic font-medium">
+            ({currentWord.sentenceTranslation1})
+          </p>
+          <p className="text-lg sm:text-xl mt-2 text-gray-600 italic font-semibold">
+            {currentWord.example2}
+          </p>
+          <p className="text-sm sm:text-md text-gray-300 italic font-medium">
+            ({currentWord.sentenceTranslation2})
+          </p>
+        </div>
+      ) : (
+        <p className="text-lg sm:text-xl">No more words for today!</p>
+      )}
+      <button
+        hidden
+        onClick={handleHideWord}
+        className="mt-5 bg-blue-500 text-white px-6 py-2 rounded-lg shadow-md hover:bg-blue-600"
+      >
+        Don't show this word anymore
+      </button>
+    </div>
+  );
 };
 
 export default Flashcard;

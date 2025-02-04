@@ -59,11 +59,11 @@ const Flashcard: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center h-screen bg-gray-100">
+    <div className="flex flex-col justify-center items-center h-screen bg-gray-100 ">
       {currentWord ? (
         <div
-          className="flex flex-col justify-center items-center bg-white shadow-lg rounded-xl sm:p-10 p-7 h-[80%] sm:w-[80%] w-[100%] text-center cursor-pointer"
-          onClick={loadNewWord}
+          className="flex flex-col justify-center items-center bg-white shadow-lg rounded-xl sm:p-10 p-7 h-[80%] sm:w-[80%] w-[100%] text-center "
+          onDoubleClick={loadNewWord}
         >
           <h2
             className={`text-4xl sm:text-6xl font-extrabold mb-4 ${

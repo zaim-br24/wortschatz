@@ -12,6 +12,7 @@ type Word = {
   sentenceTranslation2: string;
   type: "noun" | "verb" | "adjective" | "adverb";
 };
+
 type Colors = {
   noun: string;
   verb: string;
@@ -19,24 +20,27 @@ type Colors = {
   adverb: string;
 };
 
-const color: Colors[] = [
-  {
-    noun: "text-rose-600",
-    verb: "text-green-600",
-    adjective: "text-blue-700",
-    adverb: "text-purple-700",
-  },
-];
+const color: Colors = {
+  noun: "text-rose-600",
+  verb: "text-green-600",
+  adjective: "text-blue-700",
+  adverb: "text-purple-700",
+};
+
 const Flashcard: React.FC = () => {
-  const [currentWord, setCurrentWord] = useState<Word | null>(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  let touchStartX = 0;
+  let touchEndX = 0;
 
   useEffect(() => {
-    loadNewWord();
-
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.code === "Space") {
-        event.preventDefault(); // Prevent page scrolling on space press
-        loadNewWord();
+        event.preventDefault();
+        nextWord();
+      } else if (event.code === "ArrowRight") {
+        nextWord();
+      } else if (event.code === "ArrowLeft") {
+        prevWord();
       }
     };
 
@@ -46,37 +50,58 @@ const Flashcard: React.FC = () => {
     };
   }, []);
 
-  const loadNewWord = () => {
-    if (words.length === 0) {
-      setCurrentWord(null);
-      return;
-    }
-
-    const randomIndex = Math.floor(Math.random() * words.length);
-    const selectedWord = words[randomIndex];
-
-    setCurrentWord(selectedWord);
+  const nextWord = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % words.length);
   };
 
+  const prevWord = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? words.length - 1 : prevIndex - 1
+    );
+  };
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX = e.touches[0].clientX;
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    touchEndX = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStartX - touchEndX > 50) {
+      nextWord();
+    } else if (touchEndX - touchStartX > 50) {
+      prevWord();
+    }
+  };
+
+  const currentWord = words[currentIndex];
+
   return (
-    <div className="flex flex-col justify-center items-center h-screen bg-gray-100 ">
+    <div
+      className="flex flex-col justify-center items-center h-screen bg-gray-100"
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+    >
       {currentWord ? (
         <div
-          className="flex flex-col justify-center items-center bg-white shadow-lg rounded-xl sm:p-10 p-7 h-[80%] sm:w-[80%] w-[100%] text-center "
-          onDoubleClick={loadNewWord}
+          className="flex flex-col justify-center items-center bg-white shadow-lg rounded-xl sm:p-10 p-7 h-[80%] sm:w-[80%] w-[100%] text-center"
+          onDoubleClick={nextWord}
         >
           <h2
             className={`text-4xl sm:text-6xl font-extrabold mb-4 ${
-              color[0][currentWord.type]
+              color[currentWord.type]
             }`}
           >
             {currentWord.german}
             <span className="text-base sm:text-lg text-gray-500 italic">
-              ({`${currentWord.translation}`})
+              ({currentWord.translation})
             </span>
             <span className="text-base sm:text-lg text-gray-300 italic">
               {" "}
-              {`${currentWord.type}`}{" "}
+              {currentWord.type}{" "}
             </span>
           </h2>
           <p className="mb-2 text-gray-400 italic text-sm sm:text-base">

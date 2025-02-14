@@ -2,17 +2,6 @@
 import { useState, useEffect } from "react";
 import words from "../data/words";
 
-type Word = {
-  german: string;
-  meaning: string;
-  translation: string;
-  example1: string;
-  example2: string;
-  sentenceTranslation1: string;
-  sentenceTranslation2: string;
-  type: "noun" | "verb" | "adjective" | "adverb";
-};
-
 type Colors = {
   noun: string;
   verb: string;
@@ -121,7 +110,7 @@ const Flashcard: React.FC = () => {
           </p>
         </div>
       ) : (
-        <p className="text-lg sm:text-xl">No more words for today!</p>
+        <p className="text-lg sm:text-xl">No more words available!</p>
       )}
     </div>
   );

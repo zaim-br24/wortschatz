@@ -18,17 +18,7 @@ const words: Word[] = [
     sentenceTranslation1: "She intends to study abroad.",
     example2: "Was beabsichtigst du mit dieser Aktion?",
     sentenceTranslation2: "What do you intend with this action?",
-    type: "verb",
-  },
-  {
-    german: "die Bewältigung",
-    meaning: "Das erfolgreiche Meistern einer schwierigen Situation.",
-    translation: "coping, overcoming",
-    example1: "Die Bewältigung der Krise erforderte Teamwork.",
-    sentenceTranslation1: "Overcoming the crisis required teamwork.",
-    example2: "Stressbewältigung ist eine wichtige Fähigkeit.",
-    sentenceTranslation2: "Stress management is an important skill.",
-    type: "noun",
+    type: "verb"
   },
   {
     german: "einschränken",
@@ -550,8 +540,7 @@ const words: Word[] = [
     sentenceTranslation1: "He is a very reliable employee.",
     sentenceTranslation2: "She is known for her reliable work.",
     type: "adjective",
-  },
-  ,
+  }
   {
     german: "vermeiden",
     meaning: "etwas nicht tun oder umgehen",

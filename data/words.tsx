@@ -18,7 +18,7 @@ const words: Word[] = [
     sentenceTranslation1: "She intends to study abroad.",
     example2: "Was beabsichtigst du mit dieser Aktion?",
     sentenceTranslation2: "What do you intend with this action?",
-    type: "verb"
+    type: "verb",
   },
   {
     german: "einschränken",
@@ -436,7 +436,6 @@ const words: Word[] = [
     sentenceTranslation2: "The work has already been completed.",
     type: "adjective",
   },
-
   {
     german: "ausgezeichnet",
     meaning: "von hoher Qualität, hervorragend",
@@ -540,7 +539,7 @@ const words: Word[] = [
     sentenceTranslation1: "He is a very reliable employee.",
     sentenceTranslation2: "She is known for her reliable work.",
     type: "adjective",
-  }
+  },
   {
     german: "vermeiden",
     meaning: "etwas nicht tun oder umgehen",

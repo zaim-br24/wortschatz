@@ -826,5 +826,4 @@ const words: Word[] = [
   },
 ];
 
-// console.log(words.length)
 export default words;

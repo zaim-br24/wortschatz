@@ -106,6 +106,9 @@ const Flashcard: React.FC = () => {
           <p className="text-sm sm:text-md text-gray-300 italic font-medium">
             ({currentWord.sentenceTranslation2})
           </p>
+          <p className="text-xl sm:text-2xl mt-2 text-gray-600 italic font-semibold">
+            {currentIndex + 1} /  {words.length}
+          </p>
         </div>
       ) : (
         <p className="text-lg sm:text-xl">No more words available!</p>
